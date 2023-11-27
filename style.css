@@ -1,0 +1,408 @@
+/*General Properties Section Start*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --text-color:#0e0e0e;
+    --button-color: #ffa500;
+    --title-color:#fff;
+    --txt-shadow: 0px 1px  1px black;
+    --transition:.5s ease;
+    --bg-color:#f9f9f9;
+    --box-shadow:0px 5px 5px -6px black;
+}
+/*General Properties Section End*/
+
+/*Common Properties Section Start*/
+.card{
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+img{
+    transition: .5s;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+#button{
+    background: var(--button-color);
+    color: var(--title-color);
+    border: none;
+}
+#button:hover{
+    background: var(--title-color);
+    color: var(--button-color);
+    border: 1px solid var(--button-color);
+}
+.main-title{
+    text-align: center;
+    text-shadow: var(--txt-shadow)
+    font-weight: 600;
+}
+.main-title span{
+    color: var(--button-color);
+}
+   
+.about,
+.gallery,
+.services{
+    margin-top: 50px;
+}
+.home .content h1,
+.home .content p,
+.main-text h1,
+.main-txt h1,
+.packages .card .card-body h3,
+.services .card .card-body h3,
+.about h2,
+#footer h1,
+#logo{
+    font-weight: 600;
+
+}
+.nav-item .nav-link,
+.home .content h5,
+.home .content a,
+.book .submit,
+#about-btn{
+    font-weight: 550;
+}
+#logo,
+.home .content h5,
+.home .content h1,
+.home .content p,
+.main-text h1,
+.main-txt h1 span{
+    text-shadow: var(--txt-shadow);
+}
+
+
+
+
+
+
+/*Common Properties Section End*/
+
+/*Navbar Section Start*/
+#navbar{
+    background: var(--bg-color);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+#logo{
+    font-size: 36px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+#logo span{
+   color: var(--button-color);
+}
+.navbar-toggler span{
+    color: var(--button-color);
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+   font-size: 16px;
+   color: var(--text-color);
+   letter-spacing: 1px;
+   border-radius: 3px;
+   transition: .5s ease;
+}
+.nav-item .nav-link:hover{
+    background: var(--button-color);
+    color: var(--title-color);
+}
+
+/*Navbar Section End*/
+
+/*Home Section Start*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(holiday_image/background\ img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10px;
+}
+.home .content{
+    text-align: center;
+    padding-top: 200px;
+}
+.home .content h5{
+    color: var(--title-color);
+    font-size: 38px;
+}
+.home .content h1{
+    color: #fff;
+    font-size: 70px;
+    margin-top: 5px;
+}
+.home .content p{
+    color: #fff;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+.changecontent::after{
+    content: '';
+    color: #ffa500;
+    text-shadow: var(--txt-shadow);
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+    0%{content: "France";}
+    10%{content: "Spain";}
+    20%{content: "United States";}
+    30%{content: "China";}
+    40%{content: "India";}
+    50%{content: "Pakistan";}
+    60%{content: "Italy";}
+    70%{content: "Turkey";}
+    80%{content: "Mexico";}
+    90%{content: "Germany";}
+    100%{content: "United Kingdom";}
+}
+.home .content a{
+    padding: 10px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition: .5s ;
+    text-decoration: none;
+}
+.home .content a:hover{
+    background-color: var(--button-color);   
+    color: var(--title-color);
+}
+/*Home Section End*/
+
+/*Book Section Start*/
+.book{
+    background: var(--bg-color);   
+    padding: 50px;
+}
+.main-text h1{
+    text-align: center; 
+}
+.main-text h1 span{
+    color: #ffa500;
+}
+
+.book .row{
+    margin-top: 30px;
+}
+.book form input{
+    padding: 10px;
+    border: none;
+    color: black;
+    outline: none;
+    font-size: 15px;
+    box-shadow:var(--box-shadow) 
+}
+
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: var(--box-shadow)
+    height: 200px;
+}
+.book .submit{
+    width: 160px;
+    font-size: 16px;
+    color: var(--title-color);
+    background-color: var(--button-color);             
+    margin-top: 20px;
+    transition: .5s ease;                  
+    border-radius: 5px;
+}
+.book .submit:hover{
+    background-color: var(--bg-color);
+    color: var(--button-color) ;
+    transform: scale(1.1);
+}
+/*Book Section End*/
+
+/*Package Section Start*/
+.main-txt h1{
+    text-align: center;              
+    margin-top: 30px;
+}
+.main-txt h1 span{
+    color: #ffa500;
+}
+.packages .card{
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--box-shadow);
+    margin-top: 30px;
+}
+
+.packages .card .card-body{
+    background: transparent;
+}
+.packages .card .card-body h3{
+    font-size: 25px;
+}
+.packages .card .card-body p{
+    font-size: 15px;
+}
+.checked{
+    color: var(--button-color);
+}
+.star i{
+    font-size: 15px;
+}
+.packages .card .card-body h6{
+    font-size: 26px;
+}
+.packages .card .card-body a{
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--button-color);
+    color: var(--title-color);
+    border-radius: 5px;
+}
+/*Package Section End*/
+
+/*Service Section Start*/
+.services{
+    background: var(--bg-color);
+}
+
+.services .card{
+    box-shadow: var(--box-shadow);
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color: var(--button-color);
+    margin-top: 20px;
+}
+.services .card .card-body {             
+    text-align: center;
+}
+.services .card .card-body h3{             
+    margin-top: 10px;
+}
+
+/*Service Section End*/
+
+
+/*Gallery Section Start*/
+.gallery .card img:hover{
+    transform: scale(1.1);
+}
+/*Gallery Section End*/
+
+
+/*About Section Start*/
+.about h2{
+    letter-spacing: 1px;
+}
+.about p{
+    font-size: 500;
+
+}
+
+#about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: var(--title-color);
+    letter-spacing: 2px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+#about-btn:hover{
+    transform: translateX(8px);
+}
+#p-section{
+    margin-top: 25px;
+}
+/*About Section End*/
+
+/*Footer Section Start*/
+#footer{
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    background: var(--bg-color);
+}
+#footer h1{
+    padding-top: 30px;
+    text-shadow: var(--bg-color);
+}
+#footer h1 span{
+    color: #ffa500;
+}
+.social-links i{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: var(--text-color);
+    color: var(--title-color);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.social-links i:hover{
+    background-color: var(--button-color);
+}
+/*Footer Section End*/
+
+
+/*Responsive Section Start*/
+@media (max-width:850px){
+    .home{
+        background-position: 50%;
+    }
+}
+@media (max-width:450px){
+    .home .content h5{
+       font-size: 25px;
+    }
+    .home .content h1{
+        font-size: 38px;
+     }
+     .home .content p{
+        font-size: 13px;
+     }
+}
+@media (max-width:765px){
+    .book{
+        padding: 0;
+
+    }
+    .main-text h1{
+        padding: 20px;
+       
+    }
+    .about{
+        padding: 0;
+        text-align: center;
+        text-align: center;
+    }
+    
+}
+/*Responsive Section End*/
